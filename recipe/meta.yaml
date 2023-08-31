@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RBF_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RBF/RBF_{{ version }}.tar.gz
-  sha256: 45bb372200151a20a345f4b6fbc9cdba67eb99c819eaec68a1733a99f764c200
+  sha256: d535f255833af8352dae7a34d7fcf12fad82643776d646a59c8f6ea1184c8e43
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
 
   rpaths:
     - lib/R/lib/
