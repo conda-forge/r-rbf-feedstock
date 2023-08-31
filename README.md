@@ -3,6 +3,7 @@ About r-rbf-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rbf-feedstock/blob/main/LICENSE.txt)
 
+
 About r-rbf
 -----------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=RBF
 Package license: GPL-3.0-or-later
 
 Summary: A robust backfitting algorithm for additive models based on (robust) local polynomial kernel smoothers. It includes both bounded and re-descending (kernel) M-estimators, and it computes predictions for points outside the training set if desired. See Boente, Martinez and Salibian-Barrera (2017) <doi:10.1080/10485252.2017.1369077> for details.
+
 About r-rbf
 -----------
 
