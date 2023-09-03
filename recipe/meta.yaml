@@ -15,7 +15,6 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 0
-
   rpaths:
     - lib/R/lib/
     - lib/
@@ -29,10 +28,9 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
-
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
@@ -47,8 +45,8 @@ about:
   license: GPL-3.0-or-later
   summary: A robust backfitting algorithm for additive models based on (robust) local polynomial kernel smoothers. It includes both bounded and re-descending (kernel) M-estimators, and it computes predictions for points outside the training set if desired. See Boente, Martinez and Salibian-Barrera (2017) <doi:10.1080/10485252.2017.1369077>
     for details.
-
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
